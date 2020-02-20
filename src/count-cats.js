@@ -1,4 +1,6 @@
-module.exports = function countCats(/* matrix */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function countCats(backyard) {
+  if (!(backyard instanceof Array)) {
+    throw "Not an array";
+  }
+  return backyard.flat().filter(item => item === "^^").length;  
 };
